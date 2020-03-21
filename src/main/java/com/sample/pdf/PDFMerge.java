@@ -22,7 +22,7 @@ public class PDFMerge {
         mergerUtility.setDestinationFileName(output);
 
         mergerUtility.addSources(inputStreams);
-
+        mergerUtility.setDocumentMergeMode(PDFMergerUtility.DocumentMergeMode.OPTIMIZE_RESOURCES_MODE);
         mergerUtility.mergeDocuments();
 
         long endTime = Instant.now().toEpochMilli();

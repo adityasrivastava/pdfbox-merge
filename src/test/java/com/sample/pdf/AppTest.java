@@ -40,4 +40,10 @@ public class AppTest
         PDFMerge merge = new PDFMerge();
         merge.merge(files, "merge1.pdf");
     }
+
+    @Test
+    public void imageTest() {
+        PDFImage pdfImage = new PDFImage();
+        pdfImage.addImage("merge1.pdf", "samplepdf/image2.jpg", "image.pdf");
+    }
 }
